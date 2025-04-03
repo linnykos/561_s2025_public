@@ -667,9 +667,6 @@ of the concepts covered in - Lecture</li>
 <div id="pause" class="slide section level2">
 <h1>Pause</h1>
 <p>Any questions? (About the whirlwind demos or the syllabus)</p>
-<ul>
-<li>I will not proceed without at least 2 questions</li>
-</ul>
 </div>
 <div id="tour-of-rstudio" class="slide section level2">
 <h1>Tour of RStudio</h1>
@@ -685,24 +682,33 @@ of the concepts covered in - Lecture</li>
 <div id="tour-of-an-example-github-of-an-r-repository" class="slide section level2">
 <h1>Tour of an example GitHub of an R repository</h1>
 <ul>
-<li><p>(In class: <a href="https://github.com/linnykos/561_s2024_example">https://github.com/linnykos/561_s2024_example</a>)</p></li>
+<li><p>(In class: <a href="https://github.com/linnykos/561_s2024_example">https://github.com/linnykos/561_s2025_example</a>)</p></li>
 <li><p>Observe:</p>
 <ul>
-<li>The website associated with this demo package: <a href="https://linnykos.github.io/561_s2024_example/">https://linnykos.github.io/561_s2024_example/</a></li>
-<li>R code: <a href="https://github.com/linnykos/561_s2024_example/tree/main/R">https://github.com/linnykos/561_s2024_example/tree/main/R</a></li>
+<li>The website associated with this demo package: <a href="https://linnykos.github.io/561_s2024_example/">https://linnykos.github.io/561_s2025_example/</a></li>
+<li>R code: <a href="https://github.com/linnykos/561_s2024_example/tree/main/R">https://github.com/linnykos/561_s2025_example/tree/main/R</a></li>
 <li>Loading in the entire package via
-<code>library(UW561S2024Example)</code></li>
+<code>library(UW561S2025Example)</code></li>
 <li>Documentation via <code>?run_example</code></li>
 <li>Unit tests via <code>devtools::test()</code> (if I open the project
 in RStudio)</li>
 <li>Pushing and pulling to sync changes with GitHub</li>
 <li>Ability to install the package from GitHub via
-<code>devtools::install_github(&quot;linnykos/561_s2024_example&quot;)</code></li>
+<code>devtools::install_github(&quot;linnykos/561_s2025_example&quot;)</code></li>
 </ul></li>
 </ul>
-<!-- remove.packages("UW561S2024Example") -->
+<!-- remove.packages("UW561S2025Example") -->
 </div>
 <div id="a-broader-view-what-is-version-control" class="slide section level2">
+<h1>A broader view: What is “version control”?</h1>
+<p><em>Version control</em> refers to how you handle different versions
+of files.</p>
+<p>A common approach to version control is changing file names:</p>
+<ul>
+<li>papersims.R</li>
+</ul>
+</div>
+<div id="a-broader-view-what-is-version-control-1" class="slide section level2">
 <h1>A broader view: What is “version control”?</h1>
 <p><em>Version control</em> refers to how you handle different versions
 of files.</p>
@@ -712,7 +718,34 @@ of files.</p>
 <li>papersims-v2.R</li>
 <li>papersims-tmp.R</li>
 <li>papersims-comments.R</li>
-<li>papersims-hellfire.R</li>
+</ul>
+</div>
+<div id="a-broader-view-what-is-version-control-2" class="slide section level2">
+<h1>A broader view: What is “version control”?</h1>
+<p><em>Version control</em> refers to how you handle different versions
+of files.</p>
+<p>A common approach to version control is changing file names:</p>
+<ul>
+<li>papersims.R</li>
+<li>papersims-v2.R</li>
+<li>papersims-tmp.R</li>
+<li>papersims-comments.R</li>
+<li>papersims-asdf.R</li>
+<li>papersims-v5.R</li>
+<li>papersims-final.R</li>
+</ul>
+</div>
+<div id="a-broader-view-what-is-version-control-3" class="slide section level2">
+<h1>A broader view: What is “version control”?</h1>
+<p><em>Version control</em> refers to how you handle different versions
+of files.</p>
+<p>A common approach to version control is changing file names:</p>
+<ul>
+<li>papersims.R</li>
+<li>papersims-v2.R</li>
+<li>papersims-tmp.R</li>
+<li>papersims-comments.R</li>
+<li>papersims-asdf.R</li>
 <li>papersims-v5.R</li>
 <li>papersims-final.R</li>
 <li>papersims-finalMondayedits.R</li>
@@ -720,7 +753,7 @@ of files.</p>
 <li>papersims-final_final2.R</li>
 </ul>
 </div>
-<div id="a-broader-view-what-is-version-control-1" class="slide section level2">
+<div id="a-broader-view-what-is-version-control-4" class="slide section level2">
 <h1>A broader view: What is “version control”?</h1>
 <ol style="list-style-type: decimal">
 <li>How many versions until this becomes intractable?</li>

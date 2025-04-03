@@ -1,6 +1,6 @@
 ---
 title: "BIOST 561: Homework 1"
-date: "Due date: 7:00pm on Monday, April 8th, 2024"
+date: "Due date: 7:00pm on Monday, April 14th, 2025"
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -44,9 +44,9 @@ for the course expectations.
 
 # Q0: Survey
 
-<mark>**Intent**: This question is simply for course logistics and for the course instructors to get to know you.</mark>
+<mark>**Intent**: This question is simply for course logistics and for the course instructor to get to know you.</mark>
 
-- <u>**Question 0A**</u>: Please let us know your preferred name.
+- <u>**Question 0A**</u>: Please let me know your preferred name and preferred pronouns.
 
 - <u>**Question 0B**</u>: Please read the syllabus in its entirety and write, "I have read 
 and understood the entire syllabus,"
@@ -54,7 +54,7 @@ for this question. If you have any questions about the syllabus (for example, on
 the homework submission policy or collaboration policy), you may ask them here.
 
 - <u>**Question 0C**</u>: If any, please briefly describe the courses you have taken at UW that 
-involve coding (in any language) so far and how familiar/comfortable you are in coding in R. (Note: We do not expect you to have 
+involve coding (in any language) so far and how familiar/comfortable you are in coding in R. (Note: I do not expect you to have 
 taken any such courses already.)
 
 - <u>**Question 0D**</u>: What do you hope to learn from this course? (It is alright if you leave this blank, but it would be helpful to hear your thoughts.)
@@ -67,7 +67,7 @@ make an R package and a GitHub, which will be critical for this course.
 This question will be challenging for students who are not familiar with
 R Studio or GitHub, so please ask the instructor questions.</mark>
 
-Please read and walk through [https://docs.google.com/document/d/14r1u8JkRu9ClK4XldJaSRWN7MaK5JCFq0DIuzZdNxMM/edit?usp=sharing](https://docs.google.com/document/d/14r1u8JkRu9ClK4XldJaSRWN7MaK5JCFq0DIuzZdNxMM/edit?usp=sharing), as we have mentioned in class.
+Please read and walk through [https://docs.google.com/document/d/1sB5qwkeOWnCU-UUkHxOjqUTep0kgpvUi7qtHo7eV8oU/edit?usp=sharing](https://docs.google.com/document/d/1sB5qwkeOWnCU-UUkHxOjqUTep0kgpvUi7qtHo7eV8oU/edit?usp=sharing), as we have mentioned in class.
 Upon completion of this walkthrough, to get full marks for this question,
 you should have:
 
@@ -94,7 +94,7 @@ familiarity with how to do basic coding in R.</mark>
 Load in the `generate_data` function using the following code (all one line).
 
 ```{r}
-source("https://raw.githubusercontent.com/linnykos/561_s2024_public/main/homework1/generate_data.R")
+source("https://raw.githubusercontent.com/linnykos/561_s2025_public/main/HW1_files/generate_data.R")
 ```
 
 This code sources the `generate_data` function into your current R workspace.
@@ -109,6 +109,7 @@ We will now be using the `generate_data` function.
 Observe that if we run the following code, we would compute a (random, empirical) mean of the
 a dataset with `n=10` samples:
 ```{r}
+set.seed(1)
 mean(generate_data(n=10))
 ```
 Repeat the above code 10,000 times (i.e., 10,000 trials, but keeping `n=10` for
@@ -124,7 +125,7 @@ the `mar` and `mfrow` arguments, as well as the `paste`
 function. See the documentation for `par`.)
 
 ```{r clt, out.width = "600px", fig.align="center", echo = FALSE, fig.cap=c("The figure you are trying to reproduce (without the Sample watermark) in Question 2B, barring the dimensions/proportions of the figure itself and randomness inherent to the simulation.")}
-knitr::include_graphics("https://raw.githubusercontent.com/linnykos/561_s2024_public/main/homework1/clt_editted.png")
+knitr::include_graphics("https://raw.githubusercontent.com/linnykos/561_s2025_public/main/HW1_files/clt_editted.png")
 ```
 
 <u>**Question 2C**</u>: 
@@ -143,7 +144,7 @@ However, since this is the first homework, we'll mainly work with donor-level
 data instead of the cell-level data.
 
 ```{r}
-df <- read.csv("https://raw.githubusercontent.com/linnykos/561_s2024_public/main/homework1/sea-ad.csv")
+df <- read.csv("https://raw.githubusercontent.com/linnykos/561_s2025_public/main/HW1_files/sea-ad.csv")
 
 head(df)
 
@@ -178,7 +179,7 @@ to a numeric, and 3) plot a histogram of `df$Age.at.Death`.
 Figure \@ref(fig:hist) shows the desired plot you aim to reproduce.
 
 ```{r hist, out.width = "300px", fig.align="center", echo = FALSE, fig.cap=c("The figure you are trying to reproduce (without the Sample watermark) in Question 3C, barring the dimensions/proportions of the figure itself.")}
-knitr::include_graphics("https://raw.githubusercontent.com/linnykos/561_s2024_public/main/homework1/histogram-editted.png")
+knitr::include_graphics("https://raw.githubusercontent.com/linnykos/561_s2025_public/main/HW1_files/histogram-editted.png")
 ```
 
 <u>**Question 3D**</u>: The `summary()` function is much more useful when the columns
@@ -192,7 +193,7 @@ questions, show the result of `summary(df)`.
 Figure \@ref(fig:summary) shows the desired output you aim to reproduce.
 
 ```{r summary, out.width = "400px", fig.align="center", echo = FALSE, fig.cap=c("The intended output of Question 3E.")}
-knitr::include_graphics("https://raw.githubusercontent.com/linnykos/561_s2024_public/main/homework1/summary-editted.png")
+knitr::include_graphics("https://raw.githubusercontent.com/linnykos/561_s2025_public/main/HW1_files/summary-editted.png")
 ```
 
 In one sentence, describe how the summary here (in Question 3E) is more
@@ -212,7 +213,7 @@ You will want to use `na.rm=TRUE` when using the `quantile()` function.
 Figure \@ref(fig:table) shows the desired output you aim to reproduce.
 
 ```{r table, out.width = "200px", fig.align="center", echo = FALSE, fig.cap=c("The intended output of Question 3G.")}
-knitr::include_graphics("https://raw.githubusercontent.com/linnykos/561_s2024_public/main/homework1/table-editted.png")
+knitr::include_graphics("https://raw.githubusercontent.com/linnykos/561_s2025_public/main/HW1_files/table-editted.png")
 ```
 
 In one to two sentences, describe what you can learn from the relation between
@@ -234,6 +235,7 @@ you completed the walkthrough in Question 1.)
 2. Your file is in the `vignettes` folder in your `UWBiost561` R package.
 3. You push your two files, `HW1.Rmd` and `HW1.html` (the latter is the knitted HTML file) onto your GitHub repository.
 4. Double-check that you can see both files online on github.com when you look at your repository.
+5. *LASTLY*: Upload `HW1.html` to Canvas under "Assignment 1". (This is for university-wide policy, but also helps me keep track of completion status of homeworks via Canvas.)
 
 Again, ensure the username `linnykos` is added to your private GitHub repository. And with that, you're done! (For future homeworks, you will be "submitting" your homeworks like this.)
 
